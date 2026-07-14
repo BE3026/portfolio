@@ -25,11 +25,6 @@
       "react-app/jest"
     ]
   },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
