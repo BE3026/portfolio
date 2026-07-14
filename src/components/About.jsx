@@ -1,7 +1,6 @@
 import "./About.css";
 
 function About() {
-  const use = ''
   return (
     <section id="about" className="about">
 
@@ -14,7 +13,7 @@ function About() {
           <h3>Who am I?</h3>
 
           <p>
-            I'm Bharath Eswar, a Frontend Developer with experience in
+            I{"'"}m Bharath Eswar, a Frontend Developer with experience in
             React, Angular, JavaScript, and Node.js.
           </p>
 
