@@ -62,7 +62,6 @@ function Contact() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-
     setSuccessMessage("");
 
     if (!validate()) {
