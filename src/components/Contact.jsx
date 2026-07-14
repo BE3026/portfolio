@@ -83,7 +83,6 @@ function Contact() {
         },
         "H2fyBCuJ9vjMUylEK"
       );
-
       setSuccessMessage("Message sent successfully!");
 
       setFormData({
