@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-left">
-        <p className="intro">👋 Hello, I'm</p>
+        <p className="intro">👋 Hello, I{"'"}m</p>
 
         <h1>
           Bharath <span>Eswar</span>

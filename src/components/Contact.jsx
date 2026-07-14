@@ -102,7 +102,7 @@ function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <h2 className="section-title">Let's Connect</h2>
+      <h2 className="section-title">Let{"'"}s Connect</h2>
 
       <p className="contact-subtitle">
         Have an opportunity or want to discuss a project? Feel free to reach
