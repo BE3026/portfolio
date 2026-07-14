@@ -14,15 +14,23 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "test": "vitest"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix"
     ]
   },
   "browserslist": {
@@ -39,6 +47,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
     "vite": "^8.1.4"
   }
 }

@@ -1,6 +1,7 @@
 import "./About.css";
 
 function About() {
+  const use = ''
   return (
     <section id="about" className="about">
 
