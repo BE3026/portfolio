@@ -1,0 +1,41 @@
+name: PR Validation
+
+on:
+  pull_request_review:
+    types:
+      - submitted
+
+  issue_comment:
+    types:
+      - created
+
+jobs:
+  validate:
+    if: |
+      (github.event_name == 'pull_request_review' &&
+       github.event.review.state == 'approved') ||
+
+      (github.event_name == 'issue_comment' &&
+       github.event.issue.pull_request &&
+       github.event.comment.body == '+1')
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.event.issue.pull_request.head.sha }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
